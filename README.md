@@ -26,23 +26,23 @@ _**Tackle-IT:** A Productivity app that helps you organize your ideas and tasks,
 
 ## MVP
 
- The **Tackle-IT** MVP list is:
-- **SideBar**
-- **Homepage rendering the summary of the tasks**
-- **To-Do page**
-- **Task detail page**
-- **Backend working properly CRUD**
-_
+- Build Ruby on Rails server with 3 tables database
+- Build front end with react and render the proper data in each page
+- Homepage rendering the summary of the tasks
+- To-Do page with index and add button
+- Task detail page with edit and delete
+- Backend working properly CRUD
+_ 
 
 <br>
 
 ### Goals
 
--  Render elements,
-- _having buttons working properly,_
-- _sidebar routing to the correct pages_
-- _backend have the correct database,_
-- _pass the data from backend to front-end._
+- Render elements,
+- having buttons working properly,
+- sidebar routing to the correct pages,
+- backend have the correct database,
+- pass the data from backend to front-end.
 
 <br>
 
@@ -51,10 +51,11 @@ _
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Link, Route,Switch._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Front end library._ |
+|   React Router   | _Link, Route and Switch._ |
+|      Axios       | _front end connect with database._ |
+|  Ruby on Rails  | _Backend ._ |
+|  Material UI / Bootstrap   | _Design library for React._ |
 
 <br>
 
@@ -63,71 +64,78 @@ _
 #### Wireframes
 
 
-![Dummy Link](url)
+![Figma Wireframe](https://www.figma.com/file/sWwq3LaVewwNnx0rtF687k/Tackle-IT?node-id=1%3A237)
 
 - Desktop Landing
 
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+[Component tree](https://whimsical.com/tackle-it-CqTRj9KiQ7PJUtZ4G1ihVH)
+
+
+![Component tree](https://imgur.com/uu0Hhfe.png)
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+ 
 
 ``` structure
 
 src
 |__ assets/
       |__ fonts
-      |__ graphics
+      |__ icons
       |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ ./shared
+          |__ Nav.jsx
+          |__ Nav.css
+          |__ Footer.jsx
+          |__ Footer.css
+      |__ ./Task
+          |__ Task.jsx
+          |__ Task.css
+|__ screens/
+      |__ ./Register
+          |__ Register.jsx
+          |__ Register.css
+      |__ ./Login
+          |__ Login.jsx
+          |__ Login.css
+      |__ ./Home
+          |__ Home.jsx
+          |__ Home.css
+      |__ ./To-Do
+          |__ To-Do.jsx
+          |__ To-Do.css
+      |__ ./Done
+          |__ Done.jsx
+          |__ Done.css
+      |__ ./Settings
+          |__ Setting.jsx
+          |__ Settings.css
 |__ services/
-
+      |__ apiConfig.js
+      |__ task.js
+      |__ category.js
+      |__ users.js
+      
 ```
 
-#### Component Tree
-
-> Use this section to include a link to your component tree.
-
-[Component tree](url)
 
 #### Time Estimates
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Backend.            |    H     |     6 hrs      |      TBD      |     TBD     |
+| Backend.            |    H     |     12 hrs      |      TBD      |     TBD     |
 | Homepage            |    H     |     3 hrs      |      TBD      |     TBD     |
 | SideBar             |    H     |     3 hrs      |      TBD      |     TBD     |
 | Tasks summary       |    H     |     2 hrs      |      TBD      |     TBD     |
 | To-do page          |    L     |     2 hrs      |      TBD      |     TBD     |
 | To-do details pg    |    M     |     3 hrs      |      TBD      |     TBD     |
-| To-do CRUD actions  |    H     |     5 hrs      |      TBD      |     TBD     |
+| To-do CRUD actions  |    H     |     8 hrs      |      TBD      |     TBD     |
 | Post MVP            |    M     |     6 hrs      |      TBD      |     TBD     |
-| TOTAL               |          |     30 hrs     |      TBD      |     TBD     |
+| TOTAL               |          |     39 hrs     |      TBD      |     TBD     |
 
 
 <br>
@@ -135,8 +143,8 @@ src
 ### Server (Back End)
 
 #### ERD Model
+![ERD Model](https://imgur.com/C7iuBK0.png)
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 <br>
 

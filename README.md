@@ -64,7 +64,7 @@ _
 #### Wireframes
 
 
-![Figma Wireframe](https://www.figma.com/file/sWwq3LaVewwNnx0rtF687k/Tackle-IT?node-id=1%3A237)
+[Figma Wireframe](https://www.figma.com/file/sWwq3LaVewwNnx0rtF687k/Tackle-IT?node-id=1%3A237)
 
 - Desktop Landing
 

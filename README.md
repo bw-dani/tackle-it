@@ -142,7 +142,7 @@ src
 ### Server (Back End)
 
 #### ERD Model
-![ERD Model](https://imgur.com/C7iuBK0.png)
+![ERD Model](https://i.imgur.com/wfgFpsj.png)
 
 
 <br>

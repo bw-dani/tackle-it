@@ -31,8 +31,7 @@ _**Tackle-IT:** A Productivity app that helps you organize your ideas and tasks,
 - Homepage rendering the summary of the tasks
 - To-Do page with index and add button
 - Task detail page with edit and delete
-- Backend working properly CRUD
-_ 
+- Backend working properly CRUD.
 
 <br>
 

@@ -1,4 +1,3 @@
-
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -20,7 +19,6 @@
 ## Overview
 
 _**Tackle-IT:** A Productivity app that helps you organize your ideas and tasks, containing a homepage where you can see the summary of all your tasks, a to-do page where you can see all off your added tasks and a detail page where you can edit or delete the task._
-
 
 <br>
 
@@ -47,14 +45,13 @@ _**Tackle-IT:** A Productivity app that helps you organize your ideas and tasks,
 
 ### Libraries and Dependencies
 
-
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Front end library._ |
-|   React Router   | _Link, Route and Switch._ |
-|      Axios       | _front end connect with database._ |
-|  Ruby on Rails  | _Backend ._ |
-|  Material UI / Bootstrap   | _Design library for React._ |
+|         Library         | Description                        |
+| :---------------------: | :--------------------------------- |
+|          React          | _Front end library._               |
+|      React Router       | _Link, Route and Switch._          |
+|          Axios          | _front end connect with database._ |
+|      Ruby on Rails      | _Backend ._                        |
+| Material UI / Bootstrap | _Design library for React._        |
 
 <br>
 
@@ -62,23 +59,19 @@ _**Tackle-IT:** A Productivity app that helps you organize your ideas and tasks,
 
 #### Wireframes
 
-
 [Figma Wireframe](https://www.figma.com/file/sWwq3LaVewwNnx0rtF687k/Tackle-IT?node-id=1%3A237)
 
 - Desktop Landing
-
 
 #### Component Tree
 
 [Component tree](https://whimsical.com/tackle-it-CqTRj9KiQ7PJUtZ4G1ihVH)
 
-
 ![Component tree](https://imgur.com/uu0Hhfe.png)
 
 #### Component Hierarchy
- 
 
-``` structure
+```structure
 
 src
 |__ assets/
@@ -118,49 +111,46 @@ src
       |__ task.js
       |__ category.js
       |__ users.js
-      
-```
 
+```
 
 #### Time Estimates
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Backend.            |    H     |     12 hrs      |      TBD      |     TBD     |
-| Homepage            |    H     |     3 hrs      |      TBD      |     TBD     |
-| SideBar             |    H     |     3 hrs      |      TBD      |     TBD     |
-| Tasks summary       |    H     |     2 hrs      |      TBD      |     TBD     |
-| To-do page          |    L     |     2 hrs      |      TBD      |     TBD     |
-| To-do details pg    |    M     |     3 hrs      |      TBD      |     TBD     |
-| To-do CRUD actions  |    H     |     8 hrs      |      TBD      |     TBD     |
-| Post MVP            |    M     |     6 hrs      |      TBD      |     TBD     |
-| TOTAL               |          |     39 hrs     |      TBD      |     TBD     |
-
+| Task               | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------ | :------: | :------------: | :-----------: | :---------: |
+| Backend.           |    H     |     12 hrs     |      TBD      |     TBD     |
+| Homepage           |    H     |     3 hrs      |      TBD      |     TBD     |
+| SideBar            |    H     |     3 hrs      |      TBD      |     TBD     |
+| Tasks summary      |    H     |     2 hrs      |      TBD      |     TBD     |
+| To-do page         |    L     |     2 hrs      |      TBD      |     TBD     |
+| To-do details pg   |    M     |     3 hrs      |      TBD      |     TBD     |
+| To-do CRUD actions |    H     |     8 hrs      |      TBD      |     TBD     |
+| Post MVP           |    M     |     6 hrs      |      TBD      |     TBD     |
+| TOTAL              |          |     39 hrs     |      TBD      |     TBD     |
 
 <br>
 
 ### Server (Back End)
 
 #### ERD Model
-![ERD Model](https://i.imgur.com/wfgFpsj.png)
 
+![ERD Model](https://i.imgur.com/wfgFpsj.png)
 
 <br>
 
-***
+---
 
 ## Post-MVP
 
- - Tasks done page
-  - Log in page
-  - Settings page for the User Auth, with user profile picture, name,email, password and CRUD buttons
-  - Toggle button for dark theme
-  - Add done tasks summary to Homepage
-  - Add done and share button on task details page
-  - Done tasks, and done task details page
-  
+- Tasks done page
+- Log in page
+- Settings page for the User Auth, with user profile picture, name,email, password and CRUD buttons
+- Toggle button for dark theme
+- Add done tasks summary to Homepage
+- Add done and share button on task details page
+- Done tasks, and done task details page
 
-***
+---
 
 ## Code Showcase
 

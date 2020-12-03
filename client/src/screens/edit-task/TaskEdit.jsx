@@ -1,78 +1,79 @@
-import React, {useState, useEffect} from 'react';
-import { useHistory, useParams} from 'react-router-dom'
-import { getOneTasks, putTask } from '../../services/tasks'
-import './task-edit.css'
-function EditTask(props) {
-  const [task, setTask] = useState({
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+export default function TaskEdit(props) {
+  const [formData, setFormData] = useState({
     image_url: '',
     description: '',
-    created_at: '',
     deadline: '',
-    category_id:''
-  });
-  const history = useHistory();
-  const [isUpdated, setUpdated] = useState(false);
-  let { id } = useParams();
+    category: ''
+  })
+  const { id } = useParams();
+
   useEffect(() => {
-    const fetchTask = async () => {
-      const task = await getOneTasks(id);
-      setPost(post);
+    const prefillForm = () => {
+      const taskItem = props.tasks.find(task => task.id === Number(id));
+      setFormData({
+        description: taskItem.description,
+        deadline: taskItem.deadline,
+        category: taskItem.category
+      })
     }
-    fetchTask();
-  }, [id]);
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setTask({
-      ...task,
+    if (props.tasks){
+      prefillForm();
+    }
+  }, [props.tasks])
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
       [name]: value
-    });
+    }))
   }
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    let { id } = props.match.params;
-    const updated = await putTask(id, task);
-    setUpdated(updated);
-    history.push('/tasks')
-  }
+
   return (
-    <div id="edit-post-main-container">
-      <form onSubmit={handleSubmit}>
-        <div id="edit-post-sub-container">
-          <h3 id="edit-post-title">Edit Task</h3>
-          <div id="edit-post-details-box">
-            <div id="edit-title-box">
-              <input
-                className="edit-post-input"
-                type='text'
-                name='title'
-                value={task.description}
-                onChange={handleChange}
-                />
-            </div>
-            <div id="edit-content-box">
-              <input
-                className="edit-post-input"
-                id="edit-content-input"
-                type='textarea'
-                name='content'
-                value={post.content}
-                onChange={handleChange}
-                />
-            </div>
-            <div id="edit-image-box">
-              <input
-                className="edit-post-input"
-                type='text'
-                name='image_url'
-                value={post.image_url}
-                onChange={handleChange}
-                />
-            </div>
-            </div>
-            <button type="submit" id="edit-post-submit-button">Submit</button>
-          </div>
-        </form>
-      </div>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      props.handleUpdate(id, formData);
+    }}>
+      <h3>Edit Task</h3>
+      <label>image_url:
+        <input
+          type='text'
+          name='name'
+          value={formData.image_url}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>description:
+        <input
+          type='text'
+          name='name'
+          value={formData.description}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>deadline:
+        <input
+          type='text'
+          name='name'
+          value={formData.deadline}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>category
+        <input
+          type='text'
+          name='name'
+          value={formData.category}
+          onChange={handleChange}
+        />
+      </label>
+      <button>Submit</button>
+    </form>
   )
 }
-export default EditTask;

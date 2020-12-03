@@ -55,7 +55,7 @@ function App() {
   const handleCreate = async (taskData) => {
     const newTask = await postTask(taskData);
     setTasks(prevState => [...prevState, newTask]);
-    history.push('/tasks');
+    history.push('/homepage');
   }
 
   return (

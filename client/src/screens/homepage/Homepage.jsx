@@ -14,13 +14,9 @@ export default function MainContainer(props) {
       const taskData = await getAllTasks();
       setTasks(taskData);
     }
-    // const fetchFoods = async () => {
-    //   const foodData = await getAllFoods();
-    //   setFoods(foodData);
-    // }
     fetchTasks();
-    // fetchFoods();
   }, [])
+  
   return (
     <div className='task-page'>
      <div className='sidebar'>

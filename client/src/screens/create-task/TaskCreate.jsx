@@ -25,7 +25,7 @@ export default function TaskCreate(props) {
       <label>image
         <input
           type='text'
-          name='name'
+          name='image_url'
           value={formData.image_url}
           onChange={handleChange}
          />
@@ -34,7 +34,7 @@ export default function TaskCreate(props) {
       <label>description
         <input
           type='text'
-          name='name'
+          name='description'
           value={formData.description}
           onChange={handleChange}
          />
@@ -43,7 +43,7 @@ export default function TaskCreate(props) {
       <label>deadline:
         <input
           type='text'
-          name='name'
+          name='deadline'
           value={formData.deadline}
           onChange={handleChange}
          />
@@ -52,7 +52,7 @@ export default function TaskCreate(props) {
       <label>category
         <input
           type='text'
-          name='name'
+          name='category'
           value={formData.category}
           onChange={handleChange}
         />

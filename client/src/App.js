@@ -3,10 +3,11 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
-// import MainContainer from './containers/MainContainer';
+import MainContainer from './container/MainContainer';
 import Layout from './layouts/Layout';
 import Login from './screens/login/Login';
 import SignUp from './screens/register/SignUp';
+// import Homepage from './screens/homepage/Homepage'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 function App() {
@@ -44,10 +45,10 @@ function App() {
   }
 
   return (
-  //   <Layout
-  //   currentUser={currentUser}
-  //   handleLogout={handleLogout}
-  // >
+    <Layout
+    currentUser={currentUser}
+    handleLogout={handleLogout}
+  >
  <Switch>
         <Route exact path='/'>
       {/* login */}
@@ -56,12 +57,17 @@ function App() {
      
       </Route>
       <Route path='/signup'>
-          {/* register */}
+          {/* signup */}
           <SignUp handleSignup={handleSignup} />
+      </Route>
+
+      <Route path='/homepage'>
+          {/* homepage */}
+        <MainContainer currentUser={currentUser}/>
         </Route>
 
 </Switch>
-        // </Layout> 
+         </Layout> 
   );
 }
 

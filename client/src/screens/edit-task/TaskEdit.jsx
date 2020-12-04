@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom'
 
 export default function TaskEdit(props) {
   const [formData, setFormData] = useState({
@@ -14,12 +14,13 @@ export default function TaskEdit(props) {
     const prefillForm = () => {
       const taskItem = props.tasks.find(task => task.id === Number(id));
       setFormData({
+        image_url: taskItem.image_url,
         description: taskItem.description,
         deadline: taskItem.deadline,
         category: taskItem.category
       })
     }
-    if (props.tasks){
+    if (props.tasks.length){
       prefillForm();
     }
   }, [props.tasks])
@@ -35,44 +36,45 @@ export default function TaskEdit(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      props.handleUpdate(id, formData);
+      props.handleCreate(formData);
     }}>
       <h3>Edit Task</h3>
-      <label>image_url:
+      <label>image
         <input
           type='text'
-          name='name'
+          name='image_url'
           value={formData.image_url}
           onChange={handleChange}
-        />
+         />
       </label>
       <br />
-      <label>description:
+      <label>description
         <input
           type='text'
-          name='name'
+          name='description'
           value={formData.description}
           onChange={handleChange}
-        />
+         />
       </label>
       <br />
       <label>deadline:
         <input
           type='text'
-          name='name'
+          name='deadline'
           value={formData.deadline}
           onChange={handleChange}
-        />
+         />
       </label>
       <br />
       <label>category
         <input
           type='text'
-          name='name'
+          name='category'
           value={formData.category}
           onChange={handleChange}
         />
       </label>
+      <br/>
       <button>Submit</button>
     </form>
   )

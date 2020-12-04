@@ -7,8 +7,8 @@ export default function Tasks(props) {
       <h3>Tasks</h3>
       {
         props.tasks.map(task => (
-          <p key={task.id}>{task.description} - 
-          {task.deadline}</p>
+          <Link to={`/task-detail/${task.id}`} > <p key={task.id}>{task.description} - 
+          {task.deadline}</p> </Link>
           
         ))
       }

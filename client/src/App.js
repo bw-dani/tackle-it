@@ -14,6 +14,7 @@ import { loginUser, registerUser, removeToken, verifyUser } from './services/aut
 import TaskEdit from './screens/edit-task/TaskEdit';
 import TaskCreate from './screens/create-task/TaskCreate'
 import { destroyTask, getAllTask, postTask, putTask } from './services/tasks'
+import TaskDetail from './screens/task-detail/TaskDetail';
 
 
 function App() {
@@ -58,6 +59,14 @@ function App() {
     history.push('/homepage');
   }
 
+  const handleUpdate = async (id, taskData) => {
+    const updatedTask = await putTask(id, taskData);
+    setTasks(prevState => prevState.map(task => {
+      return task.id === Number(id) ? updatedTask : task
+    }))
+    history.push('/tasks');
+  }
+
   return (
   //   <Layout
   //   currentUser={currentUser}
@@ -84,15 +93,15 @@ function App() {
         <TaskCreate handleCreate={handleCreate} />
       </Route>
 
-        <Route path='/task-edit'>
+        <Route path='/task/:id/edit'>
           {/* homepage */}
-        <TaskEdit currentUser={currentUser}/>
+        <TaskEdit tasks={tasks} handleUpdate={handleUpdate}/>
         </Route>
         
-        {/* <Route path='/task-edit'> */}
+        <Route path='/task-detail/:id'>
           {/* edit task */}
-        {/* <EditTask currentUser={currentUser}/>
-        </Route> */}
+        <TaskDetail currentUser={currentUser}/>
+        </Route>
 </Switch>
         //  </Layout> 
   );

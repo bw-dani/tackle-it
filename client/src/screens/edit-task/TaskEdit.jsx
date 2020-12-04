@@ -1,5 +1,6 @@
 import { useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+
 
 export default function TaskEdit(props) {
   const [formData, setFormData] = useState({
@@ -36,7 +37,7 @@ export default function TaskEdit(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      props.handleCreate(formData);
+      props.handleUpdate(id,formData);
     }}>
       <h3>Edit Task</h3>
       <label>image

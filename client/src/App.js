@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
 import './App.css';
-import Sidebar from './components/sidebar/Sidebar';
-import MainContainer from './container/MainContainer';
+// import Sidebar from './components/sidebar/Sidebar';
+// import MainContainer from './container/MainContainer';
 import Layout from './layouts/Layout';
-import EditTask from './screens/edit-task/TaskEdit';
+// import EditTask from './screens/edit-task/TaskEdit';
 import Login from './screens/login/Login';
 import SignUp from './screens/register/SignUp';
 import {getAllTasks} from './screens/tasks/Tasks'
@@ -64,8 +64,15 @@ function App() {
     setTasks(prevState => prevState.map(task => {
       return task.id === Number(id) ? updatedTask : task
     }))
-    history.push('/tasks');
+    history.push('/homepage');
   }
+
+  const handleDelete = async (id) => {
+    await destroyTask(id);
+    setTasks(prevState => prevState.filter(task => task.id !== id))
+    history.push('/homepage');
+  }
+
 
   return (
   //   <Layout
@@ -93,14 +100,14 @@ function App() {
         <TaskCreate handleCreate={handleCreate} />
       </Route>
 
-        <Route path='/task/:id/edit'>
+        <Route path='/tasks/:id/edit'>
           {/* homepage */}
         <TaskEdit tasks={tasks} handleUpdate={handleUpdate}/>
         </Route>
         
         <Route path='/task-detail/:id'>
           {/* edit task */}
-        <TaskDetail currentUser={currentUser}/>
+        <TaskDetail currentUser={currentUser} handleDelete={handleDelete} />
         </Route>
 </Switch>
         //  </Layout> 

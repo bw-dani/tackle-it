@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams,Link } from 'react-router-dom';
-import { addCategory } from '../../services/categories';
+import { useParams, Link } from 'react-router-dom';
 import { getOneTask } from '../../services/tasks';
 import React from 'react'
 
@@ -26,19 +25,11 @@ export default function TaskDetail(props) {
       <h3>{taskItem?.deadline}</h3>
       <h3>{taskItem?.category}</h3>
       {/* <h3>{taskItem?.created_at}</h3> */}
-      
-      {
-        props.taskItem?.map(task => (
-         
-          <React.Fragment key={taskItem?.id}>
-           
-            <Link to={`/task/${taskItem?.id}/edit`}>
+            <Link to={`/tasks/${taskItem?.id}/edit`}>
              <button>Edit</button>
-            </Link>
-         </React.Fragment>
-        ))
-      }
-     
+      </Link>
+      
+      <button onClick={() => props.handleDelete(taskItem?.id)}>Delete</button>
     </div>
   )
 }

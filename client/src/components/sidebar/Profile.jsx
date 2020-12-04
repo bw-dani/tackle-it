@@ -15,11 +15,24 @@ const ProfileName = styled.h1`
     color: ${({ theme }) => theme.textColor};
 `
 
-const Profile = () => {
+const Profile = (props) => {
+  const { currentUser} = props;
     return (
         <Container>
-            {/* <ProfileImg src={Image} /> */}
-            <ProfileName>Scott Grant</ProfileName>
+        {/* <ProfileImg src={Image} /> */}
+        <div>
+          {
+            currentUser ?
+              <>
+                <p>{currentUser?.name}</p>
+              </>
+              :
+              <p>{currentUser?.username}</p>
+        }
+            
+           
+        
+        </div>
         </Container>
     )
 }

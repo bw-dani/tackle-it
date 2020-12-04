@@ -15,6 +15,7 @@ import TaskEdit from './screens/edit-task/TaskEdit';
 import TaskCreate from './screens/create-task/TaskCreate'
 import { destroyTask, getAllTask, postTask, putTask } from './services/tasks'
 import TaskDetail from './screens/task-detail/TaskDetail';
+import Settings from './screens/settings/Settings';
 
 
 function App() {
@@ -37,13 +38,13 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/homepage');
   }
 
   const handleSignup = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/homepage');
   }
 
   const handleLogout = () => {
@@ -105,6 +106,10 @@ function App() {
         <Route path='/task-detail/:id'>
           {/* edit task */}
         <TaskDetail currentUser={currentUser} handleDelete={handleDelete} />
+      </Route>
+      
+      <Route path='/settings'>
+        <Settings currentUser={currentUser}  />
         </Route>
 </Switch>
       

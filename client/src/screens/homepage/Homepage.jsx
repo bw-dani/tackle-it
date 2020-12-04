@@ -13,10 +13,15 @@ export default function MainContainer(props) {
     const fetchTasks = async () => {
       const taskData = await getAllTasks();
       setTasks(taskData);
+      const filteredTasks = taskData.filter(task =>
+        //make sure post.user_id needs to === props.currentUser.id
+        task.user_id === props.currentUser?.id
+      )
+      setTasks(filteredTasks)
     }
     fetchTasks();
   }, [])
-  
+
   return (
     <div className='task-page'>
      <div className='sidebar'>

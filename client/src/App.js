@@ -75,10 +75,7 @@ function App() {
 
 
   return (
-  //   <Layout
-  //   currentUser={currentUser}
-  //   handleLogout={handleLogout}
-  // >
+
  <Switch>
         <Route exact path='/'>
       {/* login */}
@@ -110,7 +107,7 @@ function App() {
         <TaskDetail currentUser={currentUser} handleDelete={handleDelete} />
         </Route>
 </Switch>
-        //  </Layout> 
+      
   );
 }
 

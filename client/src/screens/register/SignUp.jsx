@@ -27,14 +27,14 @@ export default function SignUp(props) {
       </div>
      
       <div className='signup-form'>
-
+       
       <label>
           <input
             className='su-input'
-          type='text'
-            name='image'
-            placeholder='Picture'
-          src={formData.image_url}
+            type='text'
+            name='image_url'
+            placeholder='image_url'
+          value={formData.image_url}
           onChange={handleChange}
         />
       </label>

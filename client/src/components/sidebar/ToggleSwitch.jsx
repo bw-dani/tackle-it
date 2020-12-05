@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useThemeSwitch } from '../../assets/ThemeSwitch'
+import { useThemeContext } from '../../context/themeContext'
 
 
 const Switch = styled.div`
@@ -63,7 +63,7 @@ const Switch = styled.div`
 `
 
 const ToggleSwitch = () => {
-    const { toggleTheme } = useThemeSwitch()
+    const { toggleTheme } = useThemeContext()
 
 
     return (
@@ -79,3 +79,5 @@ const ToggleSwitch = () => {
 
 export default ToggleSwitch
 
+// #804AD8
+// #624BD9

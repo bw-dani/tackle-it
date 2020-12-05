@@ -1,21 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../../components/sidebar/Sidebar';
+import './settings.css'
 
 function Settings(props) {
   const { currentUser, handleLogout } = props;
 
+  const userStyle = {
+    borderRadius: '50%',
+    width: '30%',
+    height: '50%'
+}
+
   return (
-    <div>
+    <div className='settings-div'>
       <Sidebar />
       <div className='userinfo-div'>
+{/* <h1>PROFILE</h1> */}
       {
         currentUser ?
-          <>
-            <p>Name: {currentUser.name}</p>
-            <p>Username: {currentUser.username}</p>
-            
-            <button onClick={handleLogout}>Logout</button>
+            <>
+              <img style={userStyle} className='user-pic' src={currentUser.image_url} />
+              <div className='user-info-div'>
+            <p className='user-info'>Name: {currentUser.name}</p>
+            <p className='user-info'>Username: {currentUser.username}</p>
+            </div>
+
+            <Link to='/'><button onClick={handleLogout}>Logout</button></Link>
           </>
           :
           <Link to='/login'>Login/Register</Link>

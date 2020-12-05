@@ -1,12 +1,7 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useContext } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-
 import './App.css';
-// import Sidebar from './components/sidebar/Sidebar';
-// import MainContainer from './container/MainContainer';
-import Layout from './layouts/Layout';
-// import EditTask from './screens/edit-task/TaskEdit';
 import Login from './screens/login/Login';
 import SignUp from './screens/register/SignUp';
 import {getAllTasks} from './screens/tasks/Tasks'
@@ -17,11 +12,19 @@ import TaskCreate from './screens/create-task/TaskCreate'
 import { destroyTask, getAllTask, postTask, putTask } from './services/tasks'
 import TaskDetail from './screens/task-detail/TaskDetail';
 import Settings from './screens/settings/Settings';
+import { lightTheme, darkTheme } from './styles/theme'
+import { GlobalStyles } from './styles/global'
+import { ThemeContext } from './context/themeContext'
+import { ThemeProvider } from 'styled-components'
+
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [tasks, setTasks] = useState([]);
+
+  const context = useContext(ThemeContext);
+  const { theme } = context;
 
   const history = useHistory()
 
@@ -77,7 +80,8 @@ function App() {
 
 
   return (
-
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyles />
  <Switch>
         <Route exact path='/'>
       {/* login */}
@@ -110,10 +114,10 @@ function App() {
       </Route>
       
       <Route path='/settings'>
-        <Settings currentUser={currentUser}  />
+        <Settings currentUser={currentUser} handleLogout={handleLogout} />
         </Route>
 </Switch>
-      
+</ThemeProvider>
   );
 }
 

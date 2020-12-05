@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-// import Image from '../../assets/images/profilelg.png'
+
+
 
 const Container = styled.div`
     margin-top: 5rem;
@@ -19,19 +20,9 @@ const Profile = (props) => {
   const { currentUser} = props;
     return (
         <Container>
-        {/* <ProfileImg src={Image} /> */}
+        <ProfileImg  src={currentUser?.image_url} />
         <div>
-          {
-            currentUser ?
-              <>
-                <p>{currentUser?.name}</p>
-              </>
-              :
-              <p>{currentUser?.username}</p>
-        }
-            
-           
-        
+       <ProfileName >{currentUser?.name}</ProfileName>
         </div>
         </Container>
     )

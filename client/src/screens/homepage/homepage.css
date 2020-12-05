@@ -1,12 +1,7 @@
-.task-page {
-}
-
-.sidebar {
-}
-
-.task-list {
+.task-list-hm {
   display: flex;
   justify-content: center;
   margin-top: 10%;
   text-align: center;
+  /* text-align: center; */
 }

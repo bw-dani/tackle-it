@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Sidebar from '../../components/sidebar/Sidebar';
+import './task-create.css'
 
 export default function TaskCreate(props) {
   const [formData, setFormData] = useState({
@@ -17,10 +19,13 @@ export default function TaskCreate(props) {
   }
 
   return (
+    
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleCreate(formData);
     }}>
+      <Sidebar />
+      <div className='create-task-form'>
       <h3>Create Task</h3>
       <label>image
         <input
@@ -58,7 +63,8 @@ export default function TaskCreate(props) {
         />
       </label>
       <br/>
-      <button>Submit</button>
+        <button>Submit</button>
+        </div>
     </form>
   )
 }

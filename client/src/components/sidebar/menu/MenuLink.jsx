@@ -29,6 +29,7 @@ const Span = styled.span`
 
 const Title = styled.h1`
     font-size: 0.9rem;
+   
     font-weight: 300;
     color: ${props => props.active ? props.theme.activeMenu : "#AAA5A5"};
 `

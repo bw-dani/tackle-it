@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Special+Elite&display=swap");
+
+.settings-div {
+  display: flex;
+  /* align-items: center; */
+}
+.userinfo-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  width: 100%;
+}
+
+.user-info-div {
+  margin-bottom: 10%;
+}
+
+.user-info {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

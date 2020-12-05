@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import Profile from './Profile';
 import Menu from './menu/Menu';
@@ -11,7 +11,7 @@ const Container = styled.div`
     left: 0;
     top: 0;
     bottom: 0;
-    width: 16rem;
+    width: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -10,13 +10,14 @@ export default function Tasks(props) {
   }
   return (
     <div className='all-tasks'>
-      <h3>Tasks: </h3>
+      <h1>Tasks: </h1>
+      <h6>(CLICK ON THE TASK TO SEE DETAILS)</h6>
       
       {
           props.tasks.map(task => (
           <div className='tasks-list'>
-          <Link to={`/task-detail/${task.id}`} className='t-item' > <img style={taskImg} src={task.image_url}/> <p key={task.id}>Description: {task.description}  
-           </p> <p key={task.id}> Deadline: {task.deadline} </p></Link> <hr/>
+              <Link to={`/task-detail/${task.id}`} className='t-item' > <img style={taskImg} src={task.image_url} /> <h4 key={task.id}> Description: {task.description}  
+         <br/> Deadline: {task.deadline} </h4></Link> <hr/>
          </div>
         ))
         }

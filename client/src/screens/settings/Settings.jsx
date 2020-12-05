@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Sidebar from '../../components/sidebar/Sidebar';
 import './settings.css'
 
 function Settings(props) {
@@ -14,9 +13,7 @@ function Settings(props) {
 
   return (
     <div className='settings-div'>
-      <Sidebar />
       <div className='userinfo-div'>
-{/* <h1>PROFILE</h1> */}
       {
         currentUser ?
             <>

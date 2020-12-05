@@ -2,7 +2,7 @@
 
 .settings-div {
   display: flex;
-  /* align-items: center; */
+  margin-left: 20%;
 }
 .userinfo-div {
   display: flex;

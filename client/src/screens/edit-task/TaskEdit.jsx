@@ -1,8 +1,11 @@
 import { useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import Sidebar from '../../components/sidebar/Sidebar'
+import './task-edit.css'
 
 
 export default function TaskEdit(props) {
+  console.log(props);
   const [formData, setFormData] = useState({
     image_url: '',
     description: '',
@@ -35,13 +38,18 @@ export default function TaskEdit(props) {
   }
 
   return (
+    <div>
+   
+      <div className='task-edit-pg'>
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleUpdate(id,formData);
     }}>
-      <h3>Edit Task</h3>
-      <label>image
+          <h3>Edit Task: </h3>
+          <div className='input'>
+      <label className='input-label'>Image: 
         <input
+         className='input-text'
           type='text'
           name='image_url'
           value={formData.image_url}
@@ -49,17 +57,21 @@ export default function TaskEdit(props) {
          />
       </label>
       <br />
-      <label>description
-        <input
-          type='text'
+      <label className='input-label'>Description: 
+        <textarea
+          className='input-text-description'
+                type='text'
+                rows='5'
+                cols='40'
           name='description'
           value={formData.description}
           onChange={handleChange}
-         />
+         ></textarea>
       </label>
       <br />
-      <label>deadline:
+      <label className='input-label'>Deadline: 
         <input
+          className='input-text'
           type='text'
           name='deadline'
           value={formData.deadline}
@@ -67,16 +79,23 @@ export default function TaskEdit(props) {
          />
       </label>
       <br />
-      <label>category
+      <label className='input-label'>Category: 
         <input
+          className='input-text'
           type='text'
           name='category'
           value={formData.category}
           onChange={handleChange}
         />
-      </label>
+            </label>
+          </div>
       <br/>
-      <button>Submit</button>
-    </form>
+          <button>Submit</button>
+        <Link to='/homepage' ><button>Cancel</button></Link>
+
+        </form>
+
+        </div>
+      </div>
   )
 }

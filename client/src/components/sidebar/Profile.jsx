@@ -5,9 +5,12 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     margin-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
 `
 
 const ProfileImg = styled.img`
+    alignSelf: center,
     height: 5rem;
 `
 const ProfileName = styled.h1`
@@ -17,13 +20,23 @@ const ProfileName = styled.h1`
 `
 
 const Profile = (props) => {
-  const { currentUser} = props;
+
+  const userImg = {
+    borderRadius: '50%',
+    width: '80%',
+    height: '105%',
+    // paddingLeft: '10%',
+    // paddingRight: '10%'
+  }
+ 
+  const { currentUser } = props;
+ 
     return (
-        <Container>
-        <ProfileImg  src={currentUser?.image_url} />
-        <div>
+      <Container>
+       
+        <ProfileImg  style={userImg} src={currentUser?.image_url} />
        <ProfileName >{currentUser?.name}</ProfileName>
-        </div>
+        
         </Container>
     )
 }

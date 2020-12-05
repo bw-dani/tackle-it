@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getOneTask } from '../../services/tasks';
 import React from 'react'
+import './task-detail.css'
+import Sidebar from '../../components/sidebar/Sidebar'
 
 export default function TaskDetail(props) {
   const [taskItem, setTaskItem] = useState(null);
@@ -17,19 +19,29 @@ export default function TaskDetail(props) {
     fetchTaskItem();
   }, [id])
 
+  const taskImg = {
+    borderRadius: '50%',
+    width: '40%',
+    height: '50%'
+
+  }
 
   return (
-    <div>
-      <h1>{taskItem?.image_url}</h1>
+    <>
+  
+    <div className='task-detail'>
+      <img style={taskImg} src={taskItem?.image_url}/> 
       <h3>{taskItem?.description}</h3>
       <h3>{taskItem?.deadline}</h3>
       <h3>{taskItem?.category}</h3>
-      {/* <h3>{taskItem?.created_at}</h3> */}
-            <Link to={`/tasks/${taskItem?.id}/edit`}>
+      <div className='editDelete-btns'>
+            <Link to={`/tasks/${taskItem?.id}/edit`} className='edit-btn'>
              <button>Edit</button>
       </Link>
       
       <button onClick={() => props.handleDelete(taskItem?.id)}>Delete</button>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }

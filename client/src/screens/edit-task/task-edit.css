@@ -1,0 +1,13 @@
+.task-edit-pg {
+  margin-left: 20%;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: center;
+  text-align: left;
+}

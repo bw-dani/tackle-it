@@ -25,7 +25,7 @@ export default function MainContainer(props) {
   return (
     <div className='task-page'>
      <div className='sidebar'>
-        <Sidebar />
+       
       </div>
        <div className='task-list-hm'>
       <Tasks tasks={tasks}/>

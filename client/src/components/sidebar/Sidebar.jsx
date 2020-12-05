@@ -11,17 +11,19 @@ const Container = styled.div`
     left: 0;
     top: 0;
     bottom: 0;
-    width: 12rem;
+    width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     `
 
 export default function Sidebar(props) {
+
+
   const { currentUser, handleLogout } = props;
   return (
     <Container>
-            <Profile />
+      <Profile currentUser={currentUser}/>
             <Menu />
             <ToggleSwitch />
         </Container>

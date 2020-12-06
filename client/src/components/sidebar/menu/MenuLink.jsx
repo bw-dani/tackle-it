@@ -16,7 +16,15 @@ const Container = styled.div`
     transition: 0.2s all ease-in-out;
     &:hover {
         background-color: rgba(0,0,0,0.1);
+        
     }
+    @media only screen and (min-device-width: 280px) and (max-device-width: 812px){
+      display:content;
+      // padding-top:2rem;
+      place-content: space-evenly;
+     
+    }
+    
 `
 
 
@@ -25,6 +33,11 @@ const Span = styled.span`
     color: ${props => !props.active && props.theme.textColor};
     font-size: 1rem;
     margin-right: 1rem;
+    @media only screen and (min-device-width: 280px) and (max-device-width: 812px){
+      
+
+    }
+   
 `
 
 const Title = styled.h1`
@@ -32,6 +45,10 @@ const Title = styled.h1`
    
     font-weight: 300;
     color: ${props => props.active ? props.theme.activeMenu : "#AAA5A5"};
+    @media(max-width: 625px){
+      display:none;
+     
+    }
 `
 
 const MenuLink = ({ title, active, icon }) => {

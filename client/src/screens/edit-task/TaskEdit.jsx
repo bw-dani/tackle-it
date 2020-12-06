@@ -91,7 +91,7 @@ export default function TaskEdit(props) {
           </div>
       <br/>
           <button>Submit</button>
-        <Link to='/homepage' ><button>Cancel</button></Link>
+        <Link to='/homepage' className='cancel-btn' ><button>Cancel</button></Link>
 
         </form>
 

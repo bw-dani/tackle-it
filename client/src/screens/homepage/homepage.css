@@ -1,8 +1,13 @@
 .task-list-hm {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
   margin-left: 20%;
   /* text-align: center; */
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+  .task-list-hm {
+    margin-left: 0%;
+  }
 }

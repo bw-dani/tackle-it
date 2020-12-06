@@ -21,9 +21,9 @@ export default function TaskDetail(props) {
 
   const taskImg = {
     borderRadius: '50%',
-    width: '40%',
-    height: '50%'
-
+    width: '20%',
+    height: '40%',
+    marginBottom:'30px'
   }
 
   return (
@@ -31,9 +31,9 @@ export default function TaskDetail(props) {
   
     <div className='task-detail'>
       <img style={taskImg} src={taskItem?.image_url}/> 
-      <h3>{taskItem?.description}</h3>
-      <h3>{taskItem?.deadline}</h3>
-      <h3>{taskItem?.category}</h3>
+      <h3>Description: {taskItem?.description}</h3>
+      <h3>Deadline: {taskItem?.deadline}</h3>
+      <h3>Category: {taskItem?.category}</h3>
       <div className='editDelete-btns'>
             <Link to={`/tasks/${taskItem?.id}/edit`} className='edit-btn'>
              <button>Edit</button>

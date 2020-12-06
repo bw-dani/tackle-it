@@ -1,12 +1,19 @@
 .task-detail {
-  margin-left: 20%;
+  margin-left: 10%;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 .editDelete-btns {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .edit-btn {
   padding-right: 8%;
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+  .task-detail {
+    margin-left: 0;
+    padding-top: 25%;
+  }
 }

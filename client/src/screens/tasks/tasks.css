@@ -1,6 +1,6 @@
-/* .all-tasks {
-  justify-content: center;
-} */
+.all-tasks {
+  width: 100%;
+}
 
 .task-list {
   display: flex;
@@ -22,5 +22,17 @@
 }
 
 hr {
-  width: 70%;
+  width: 90%;
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+  h6 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .all-tasks {
+    padding-top: 10%;
+  }
 }

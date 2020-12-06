@@ -7,6 +7,7 @@ export default function Tasks(props) {
     borderRadius: '50%',
     width: '10%',
     height: '55%'
+    
   }
   return (
     <div className='all-tasks'>

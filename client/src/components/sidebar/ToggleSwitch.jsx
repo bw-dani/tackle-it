@@ -18,6 +18,10 @@ const Switch = styled.div`
         position: absolute;
         left: 0;
         top: 0;
+        @media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+          margin-top:5px;
+        margin-left:10px;
+           }
     }
     .switch__input {
         margin: 0;
@@ -36,6 +40,7 @@ const Switch = styled.div`
         &:active + .switch__label {
             box-shadow: 0 0 0 3px alpha(${({ theme }) => theme.primary}, 0.2);
         }
+        
     }
     .switch__label {
         width: 100%;
@@ -46,7 +51,11 @@ const Switch = styled.div`
         border-radius: inherit;
         z-index: 1;
         transition: background ${({ theme }) => theme.switchAnimationDuration};
-    }
+        @media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+         width:80%;
+         height: 80%;
+           }
+      }
     .switch__marker {
         position: relative;
         background-color: ${({ theme }) => theme.primary};
@@ -59,6 +68,12 @@ const Switch = styled.div`
         left: ${({ theme }) => theme.switchPadding};
         transition: left ${({ theme }) => theme.switchAnimationDuration};
         will-change: left;
+        @media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+          margin-top:5px;
+          width:30%;
+         height: 80%;
+         margin-left:10px;
+           }
     }
 `
 

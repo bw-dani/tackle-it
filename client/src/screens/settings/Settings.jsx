@@ -7,8 +7,9 @@ function Settings(props) {
 
   const userStyle = {
     borderRadius: '50%',
-    width: '30%',
-    height: '50%'
+    width: '20%',
+    height: '40%',
+    marginBottom:'30px'
 }
 
   return (

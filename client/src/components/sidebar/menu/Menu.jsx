@@ -9,9 +9,17 @@ import styled from 'styled-components'
 const Container = styled.div`
     margin-top: 2rem;
     width: 100%;
+    @media only screen and (min-device-width: 280px) and (max-device-width: 812px){
+      display:flex;
+      flex-directiom:row;
+      height:1rem;
+      margin:0;
+    }
+    
 `
 
 const Menu = () => {
+
     return (
       <Container> 
         <Link to={'/homepage'}><MenuLink  title="Home" icon={'home'}/></Link> 

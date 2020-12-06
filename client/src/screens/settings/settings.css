@@ -13,11 +13,17 @@
 }
 
 .user-info-div {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .user-info {
   font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+  .settings-div {
+    padding-top: 25%;
+    margin-left: 0;
+  }
 }

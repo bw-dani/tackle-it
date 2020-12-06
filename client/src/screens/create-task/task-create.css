@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 10%;
-  margin-left: 20%;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 100%;
 }
 
 .input {
@@ -17,7 +18,7 @@
   border-radius: 40px;
   padding-left: 0px;
   height: 30px;
-  width: 25rem;
+  width: 45rem;
   border-radius: 10px;
   border-color: white;
   padding-left: 5px;
@@ -29,8 +30,8 @@
 .input-text-description {
   border-radius: 40px;
   padding-left: 0px;
-  height: 100px;
-  width: 25rem;
+  height: 15rem;
+  width: 45rem;
   border-radius: 10px;
   border-color: white;
   padding-left: 5px;
@@ -45,4 +46,20 @@
   font-weight: bold;
   font-size: 1.2rem;
   font-family: "Oswald", sans-serif;
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+  .create-task-form {
+    margin-left: 0%;
+  }
+
+  .input {
+    /* width: 50%; */
+  }
+  .input-text {
+    width: 20rem;
+  }
+  .input-text-description {
+    width: 20rem;
+  }
 }

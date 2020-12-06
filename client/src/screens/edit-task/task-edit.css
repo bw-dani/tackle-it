@@ -1,6 +1,6 @@
 .task-edit-pg {
-  margin-left: 20%;
-  padding-top: 10%;
+  margin-left: 10%;
+  padding-top: 5%;
   text-align: center;
 }
 
@@ -10,4 +10,17 @@
   width: 50%;
   align-self: center;
   text-align: left;
+}
+.cancel-btn {
+  margin-left: 10%;
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) {
+  .task-edit-pg {
+    margin-left: 0%;
+    padding-top: 15%;
+  }
+  .input-label {
+    width: 100%;
+    padding-left: 8%;
+  }
 }

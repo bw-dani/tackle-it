@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Profile from './Profile';
 import Menu from './menu/Menu';
 import ToggleSwitch from './ToggleSwitch'
-import './sidebar.css'
+
 
 const Container = styled.div`
     background-color: ${({ theme }) => theme.secondary};

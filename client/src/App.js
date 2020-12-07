@@ -4,7 +4,6 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
 import Login from './screens/login/Login';
 import SignUp from './screens/register/SignUp';
-
 import Homepage from './screens/homepage/Homepage'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import TaskEdit from './screens/edit-task/TaskEdit';

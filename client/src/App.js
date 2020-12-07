@@ -52,7 +52,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/homepage');
+    history.push('/')
   }
 
   const handleSignup = async (registerData) => {

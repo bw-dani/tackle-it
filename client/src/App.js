@@ -33,7 +33,7 @@ function App() {
       const userData = await verifyUser();
       setCurrentUser(userData);
       if (!userData) {
-        history.push('/homepage')
+        history.push('/')
       }
     }
     handleVerify();

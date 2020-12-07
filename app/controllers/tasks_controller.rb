@@ -10,6 +10,7 @@ class TasksController < ApplicationController
     render json: @tasks
   end
 
+  
   # GET /tasks/1
   def show
     render json: @task, include: :categories

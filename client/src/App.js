@@ -33,7 +33,7 @@ function App() {
       const userData = await verifyUser();
       setCurrentUser(userData);
       if (!userData) {
-        history.push('/homepage')
+        history.push('/')
       }
     }
     handleVerify();
@@ -52,7 +52,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/')
+    history.push('/homepage')
   }
 
   const handleSignup = async (registerData) => {

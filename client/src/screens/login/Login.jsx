@@ -53,7 +53,7 @@ function Login(props) {
         <br />
         <div className='ls-btn'>
       <Link to='/signup' className='signup-btn'><button>Sign-Up</button></Link>
-          <button className='submit-btn'>Submit</button>
+         <Link to='/homepage'><button className='submit-btn'>Submit</button></Link> 
         </div>
       </div>
     </form>

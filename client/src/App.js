@@ -37,7 +37,7 @@ function App() {
       }
     }
     handleVerify();
-  }, [])
+  }, [history])
 
   useEffect(() => {
     
